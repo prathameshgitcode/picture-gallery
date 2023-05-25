@@ -1,7 +1,7 @@
 const accessKey = "Enter_Your_Unsplash_Access_key_Here";
 const gallery = document.getElementById("gallery");
 
-function searchPhotos() {
+function search() {
   const category = document.getElementById("category").value;
 
   gallery.innerHTML = "";
