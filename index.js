@@ -1,4 +1,4 @@
-const accessKey = "Unsplash_Access_key";
+const accessKey = "Enter_Your_Unsplash_Access_key_Here";
 const gallery = document.getElementById("gallery");
 
 function searchPhotos() {
