@@ -4,10 +4,8 @@ const gallery = document.getElementById("gallery");
 function searchPhotos() {
   const category = document.getElementById("category").value;
 
-  // Clear previous results
   gallery.innerHTML = "";
 
-  // Fetch images from Unsplash API based on the category
   fetch(
     `https://api.unsplash.com/search/photos?query=${category}&client_id=${accessKey}`
   )
@@ -52,7 +50,6 @@ function searchPhotos() {
     .catch((error) => console.log(error));
 }
 
-// Open image link in a new tab
 function openImage(url) {
   window.open(url, "_blank");
 }
