@@ -1,11 +1,13 @@
-const accessKey = "Enter_Your_Unsplash_Access_key_Here";
+const accessKey = "m_kcUy3zsX7iqYO-UexyW6OCplEMENJronU8aywe4Go";
 const gallery = document.getElementById("gallery");
 
 function search() {
   const category = document.getElementById("category").value;
 
+  // Clear previous results
   gallery.innerHTML = "";
 
+  // Fetch images from Unsplash API based on the category
   fetch(
     `https://api.unsplash.com/search/photos?query=${category}&client_id=${accessKey}`
   )
@@ -50,6 +52,7 @@ function search() {
     .catch((error) => console.log(error));
 }
 
+// Open image link in a new tab
 function openImage(url) {
   window.open(url, "_blank");
 }
